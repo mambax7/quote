@@ -1,0 +1,77 @@
+-
+    id: '1'
+    name: 'Albert Einstein'
+    country: US
+    bio: '<div class="module__text"><span class="js-about-item-abstr"><strong>Albert Einstein</strong> was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His work is also known for its influence on the philosophy of science. He is best known to the general public for his mass&ndash;energy equivalence formula 1=E = mc2, which has been dubbed "the world''s most famous equation".</span><a class="module__more-at js-about-item-more-at-inline tx--bold" href="https://en.wikipedia.org/wiki/Albert_Einstein">Wikipedia</a></div><div class="about-info-box"><div class="about-info-box__info-row"></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Born:&nbsp;</span></strong><span class="about-info-box__info-value">Mar 14, 1879, Ulm, Kingdom of W&uuml;rttemberg, German Empire</span></div><div class="about-info-box__info-row"></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Died:&nbsp;</span></strong><span class="about-info-box__info-value">Apr 18, 1955, Princeton, New Jersey, US</span></div><div class="about-info-box__info-row"></div><div class="about-info-box__info-row"><span class="about-info-box__info-label"><strong>Residence</strong>:&nbsp;</span><span class="about-info-box__info-value">Germany, Italy, Switzerland, Austria (present-day Czech Republic), Belgium, United States</span></div></div>'
+    photo: photo_5ca078b972466.png
+    created: '2019-03-31'
+-
+    id: '2'
+    name: 'Henry Ford'
+    country: US
+    bio: '<div class="module__text"><span class="js-about-item-abstr"><strong>Henry Ford</strong> was an American captain of industry and a business magnate, the founder of the Ford Motor Company, and the sponsor of the development of the assembly line technique of mass production.</span><a class="module__more-at js-about-item-more-at-inline tx--bold" href="https://en.wikipedia.org/wiki/Henry_Ford">Wikipedia</a></div><div class="about-info-box"><div class="about-info-box__info-row"><span class="about-info-box__info-label"></span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Born:&nbsp;</span></strong><span class="about-info-box__info-value">30, 1863, Greenfield Township, Michigan, US</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Died:&nbsp;</span></strong><span class="about-info-box__info-value">07, 1947, Fair Lane, Dearborn, Michigan, US</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Nationality:&nbsp;</span></strong><span class="about-info-box__info-value">American</span></div></div>'
+    photo: photo_5ca077fbc8657.png
+    created: '2019-03-31'
+-
+    id: '3'
+    name: 'Nelson Mandela'
+    country: ZA
+    bio: '<div class="module__text"><span class="js-about-item-abstr"><strong>Nelson Rolihlahla Mandela</strong> was a South African anti-apartheid revolutionary, political leader, and philanthropist, who served as President of South Africa from 1994 to 1999. He was the country''s first black head of state and the first elected in a fully representative democratic election.</span><a class="module__more-at js-about-item-more-at-inline tx--bold" href="https://en.wikipedia.org/wiki/Nelson_Mandela">Wikipedia</a></div><div class="about-info-box"><div class="about-info-box__info-row"><span class="about-info-box__info-label"></span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Born:&nbsp;</span></strong><span class="about-info-box__info-value">Jul 18, 1918, Mvezo, Cape Province, South Africa</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Died:&nbsp;</span></strong><span class="about-info-box__info-value">Dec 05, 2013, Johannesburg, Gauteng, South Africa</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Cause of death:&nbsp;</span></strong><span class="about-info-box__info-value">Respiratory infection</span></div></div>'
+    photo: photo_5ca078387e464.png
+    created: '2019-03-31'
+-
+    id: '4'
+    name: 'John F. Kennedy'
+    country: US
+    bio: '<div class="module__text"><span class="js-about-item-abstr"><strong>John Fitzgerald "Jack" Kennedy</strong>, commonly referred to by his initials JFK, was an American politician who served as the 35th President of the United States from January 1961 until his assassination in November 1963. He served at the height of the Cold War, and the majority of his presidency dealt with managing relations with the Soviet Union.</span><a class="module__more-at js-about-item-more-at-inline tx--bold" href="https://en.wikipedia.org/wiki/John_F._Kennedy">Wikipedia</a></div><div class="about-info-box"><div class="about-info-box__info-row"><span class="about-info-box__info-label"></span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Born:&nbsp;</span></strong><span class="about-info-box__info-value">John Fitzgerald Kennedy, May 29, 1917, Brookline, Massachusetts, U.S.</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Died:&nbsp;</span></strong><span class="about-info-box__info-value">Nov 22, 1963, Dallas, Texas, U.S.</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Cause of death:&nbsp;</span></strong><span class="about-info-box__info-value">Assassination</span></div></div>'
+    photo: photo_5ca07872ecf07.png
+    created: '2019-03-31'
+-
+    id: '5'
+    name: 'Oprah Winfrey'
+    country: US
+    bio: '<div class="module__text"><span class="js-about-item-abstr"><strong>Oprah Winfrey</strong> is an American media proprietor, talk show host, actress, producer, and philanthropist. She is best known for her talk show The Oprah Winfrey Show, which was the highest-rated television program of its kind in history and was nationally syndicated from 1986 to 2011 in Chicago, Illinois.</span><a class="module__more-at js-about-item-more-at-inline tx--bold" href="https://en.wikipedia.org/wiki/Oprah_Winfrey">Wikipedia</a></div><div class="about-info-box"><div class="about-info-box__info-row"><span class="about-info-box__info-label"></span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Born:&nbsp;</span></strong><span class="about-info-box__info-value">Orpah Gail Winfrey, Jan 29, 1954, Kosciusko, Mississippi, U.S.</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Residence:&nbsp;</span></strong><span class="about-info-box__info-value">Montecito, California, Lavallette, New Jersey, Telluride, Colorado, Maui, Hawaii, Chicago, Illinois, Fisher Island, Florida</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Alma mater:&nbsp;</span></strong><span class="about-info-box__info-value">Tennessee State University</span></div></div>'
+    photo: photo_5ca078e3ebf31.png
+    created: '2019-03-31'
+-
+    id: '6'
+    name: 'Tom Hiddleston'
+    country: GB
+    bio: '<div class="module__text"><span class="js-about-item-abstr"><strong>Thomas William Hiddleston</strong> is an English actor, film producer and musician. At the beginning of his career, he appeared in West End theatre productions of Cymbeline and Ivanov.</span><a class="module__more-at js-about-item-more-at-inline tx--bold" href="https://en.wikipedia.org/wiki/Tom_Hiddleston">Wikipedia</a></div><div class="about-info-box"><div class="about-info-box__info-row"><span class="about-info-box__info-label"></span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Born:&nbsp;</span></strong><span class="about-info-box__info-value">Thomas William Hiddleston, Feb 9, 1981, Westminster, London, England</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Residence:&nbsp;</span></strong><span class="about-info-box__info-value">Belsize Park, London, England</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Occupation:&nbsp;</span></strong><span class="about-info-box__info-value">Actor, producer, musician</span></div></div>'
+    photo: photo_5ca0790a5bbc9.png
+    created: '2019-03-31'
+-
+    id: '7'
+    name: 'Abraham Lincoln'
+    country: US
+    bio: '<div class="module__text"><span class="js-about-item-abstr"><strong>Abraham Lincoln</strong> was an American statesman and lawyer who served as the 16th President of the United States from March 1861 until his assassination in April 1865. Lincoln led the United States through the American Civil War&mdash;its bloodiest war and perhaps its greatest moral, constitutional, and political crisis. In doing so, he preserved the Union, abolished slavery, strengthened the federal government, and modernized the economy.</span><a class="module__more-at js-about-item-more-at-inline tx--bold" href="https://en.wikipedia.org/wiki/Abraham_Lincoln">Wikipedia</a></div><div class="about-info-box"><div class="about-info-box__info-row"><span class="about-info-box__info-label"></span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Born:&nbsp;</span></strong><span class="about-info-box__info-value">Feb 12, 1809, Sinking Spring Farm, near Hodgenville, Kentucky, U.S.</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Died:&nbsp;</span></strong><span class="about-info-box__info-value">Apr 15, 1865, Petersen House, Washington, D.C, U.S.</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Cause of death:&nbsp;</span></strong><span class="about-info-box__info-value">Assassination</span></div></div>'
+    photo: photo_5ca0792d26d70.png
+    created: '2019-03-31'
+-
+    id: '8'
+    name: Confucius
+    country: CN
+    bio: '<div class="module__text"><span class="js-about-item-abstr"><strong>Confucius</strong> was a Chinese teacher, editor, politician, and philosopher of the Spring and Autumn period of Chinese history.</span><a class="module__more-at js-about-item-more-at-inline tx--bold" href="https://en.wikipedia.org/wiki/Confucius">Wikipedia</a></div><div class="about-info-box"><div class="about-info-box__info-row"><span class="about-info-box__info-label"></span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Born:&nbsp;</span></strong><span class="about-info-box__info-value">551 BC, Zou, Lu, Zhou Kingdom (present-day Nanxinzhen, Qufu, Shandong, China)</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Died:&nbsp;</span></strong><span class="about-info-box__info-value">479 BC (aged 71&ndash;72), Lu, Zhou Kingdom</span></div><div class="about-info-box__info-row"><strong><span class="about-info-box__info-label">Nationality:&nbsp;</span></strong><span class="about-info-box__info-value">Zhou</span></div></div>'
+    photo: photo_5ca07964e2a99.png
+    created: '2019-03-31'
+-
+    id: '9'
+    name: 'Arthur Rubinstein'
+    country: US
+    bio: '<p><span class="js-about-item-abstr"><strong>Arthur Rubinstein</strong> was a Polish American classical pianist. He received international acclaim for his performances of the music written by a variety of composers and many regard him as the greatest Chopin interpreter of his time. He was described by The New York Times as one of the greatest pianists of the twentieth century. He played in public for eight decades.&nbsp;</span><a class="module__more-at-bottom js-about-item-more-at-bottom" href="https://en.wikipedia.org/wiki/Arthur_Rubinstein">More at Wikipedia</a></p>'
+    photo: photo_5ca079948a4b1.png
+    created: '2019-03-31'
+-
+    id: '10'
+    name: 'Audrey Hepburn'
+    country: GB
+    bio: '<div class="module__text"><span class="js-about-item-abstr"><strong>Audrey Hepburn</strong> was a British actress, model, dancer and humanitarian. Recognised as a film and fashion icon, Hepburn was active during Hollywood''s Golden Age.</span><a class="module__more-at js-about-item-more-at-inline tx--bold" href="https://en.wikipedia.org/wiki/Audrey_Hepburn">Wikipedia</a></div><div class="about-info-box"><div class="about-info-box__info-row"></div><div class="about-info-box__info-row"><span class="about-info-box__info-label"><strong>Born:</strong>&nbsp;</span><span class="about-info-box__info-value">Audrey Kathleen Ruston, May 4, 1929, Ixelles, Brussels, Belgium</span></div><div class="about-info-box__info-row"><span class="about-info-box__info-label"><strong>Died:</strong>&nbsp;</span><span class="about-info-box__info-value">Jan 20, 1993, Tolochenaz, Vaud, Switzerland</span></div><div class="about-info-box__info-row"><span class="about-info-box__info-label"><strong>Cause of death:</strong>&nbsp;</span><span class="about-info-box__info-value">Appendiceal cancer</span></div></div>'
+    photo: photo_5ca079c4eda38.png
+    created: '2019-03-31'
+-
+    id: '11'
+    name: 'George Bernard Shaw'
+    country: '0'
+    bio: '<div class="module__text"><span class="js-about-item-abstr">George Bernard Shaw, known at his insistence simply as Bernard Shaw, was an Irish playwright, critic, polemicist, and political activist. His influence on Western theatre, culture and politics extended from the 1880s to his death and beyond.</span><a class="module__more-at js-about-item-more-at-inline tx--bold" href="https://en.wikipedia.org/wiki/George_Bernard_Shaw">Wikipedia</a></div><div class="about-info-box"><div class="about-info-box__info-row"><span class="about-info-box__info-label">Born:</span><span class="about-info-box__info-value">Jul 26, 1856, Portobello, Dublin, Ireland</span></div><div class="about-info-box__info-row"><span class="about-info-box__info-label">Died:</span><span class="about-info-box__info-value">Nov 2, 1950, Ayot St Lawrence, Hertfordshire, England</span></div><div class="about-info-box__info-row"><span class="about-info-box__info-label">Resting place:</span><span class="about-info-box__info-value">Shaw''s Corner, Ayot St Lawrence, Hertfordshire, England</span></div></div>'
+    photo: photo_5ca079f6cf578.png
+    created: '2019-03-31'

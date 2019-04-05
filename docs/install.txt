@@ -1,0 +1,4 @@
+INSTALLATION
+=============
+
+Install just like another XOOPS module

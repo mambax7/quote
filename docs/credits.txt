@@ -1,0 +1,6 @@
+CREDITS
+=============
+
+Originally created by the XOOPS Development Team.
+
+

@@ -1,0 +1,36 @@
+-
+    id: '1'
+    pid: '0'
+    title: Science
+    description: ''
+    image: blank.png
+    weight: '1'
+    color: '#ffff00'
+    online: '1'
+-
+    id: '2'
+    pid: '0'
+    title: Politics
+    description: ''
+    image: blank.png
+    weight: '1'
+    color: '#0000ff'
+    online: '1'
+-
+    id: '3'
+    pid: '0'
+    title: Arts
+    description: ''
+    image: blank.png
+    weight: '1'
+    color: '#ff00ff'
+    online: '1'
+-
+    id: '4'
+    pid: '0'
+    title: Other
+    description: ''
+    image: blank.png
+    weight: '0'
+    color: '#000000'
+    online: '0'
