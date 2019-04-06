@@ -45,7 +45,7 @@ class Configurator
      */
     public function __construct()
     {
-        $moduleDirName = basename(dirname(dirname(__DIR__)));
+        // $moduleDirName = basename(dirname(dirname(__DIR__)));
 
         require_once dirname(dirname(__DIR__)) . '/include/config.php';
         $config = getConfig();

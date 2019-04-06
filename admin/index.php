@@ -94,7 +94,7 @@ function hideButtons($yamlFile)
 
 function showButtons($yamlFile)
 {
-    $app                        = []
+    $app                        = [];
     $app['displaySampleButton'] = 1;
     Yaml::save($app, $yamlFile);
     redirect_header('index.php', 0, '');

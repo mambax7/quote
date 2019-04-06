@@ -46,7 +46,7 @@ function xoops_module_pre_uninstall_quote(\XoopsModule $module)
 function xoops_module_uninstall_quote(\XoopsModule $module)
 {
     require dirname(__DIR__) . '/preloads/autoloader.php';
-    $moduleDirName = basename(dirname(__DIR__));
+    //$moduleDirName = basename(dirname(__DIR__));
     //$moduleDirNameUpper = mb_strtoupper($moduleDirName); //$capsDirName
 
     /** @var \XoopsModules\Quote\Helper $helper */

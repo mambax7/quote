@@ -52,7 +52,7 @@ function tableExists($tablename)
  */
 function xoops_module_pre_update_quote(\XoopsModule $module)
 {
-    // /** @var \XoopsModules\Quote\Helper $helper */ 
+    // /** @var \XoopsModules\Quote\Helper $helper */
     //$helper       = \XoopsModules\Quote\Helper::getInstance();
     /** @var \XoopsModules\Quote\Utility $utility */
     $utility = new \XoopsModules\Quote\Utility();
@@ -76,7 +76,7 @@ function xoops_module_pre_update_quote(\XoopsModule $module)
 
 function xoops_module_update_quote(\XoopsModule $module, $previousVersion = null)
 {
-    $moduleDirName      = basename(dirname(__DIR__));
+    $moduleDirName = basename(dirname(__DIR__));
     //$moduleDirNameUpper = mb_strtoupper($moduleDirName);
 
     /** @var Quote\Helper $helper */ /** @var Quote\Utility $utility */
@@ -94,17 +94,18 @@ function xoops_module_update_quote(\XoopsModule $module, $previousVersion = null
                 $templateFolder = $GLOBALS['xoops']->path('modules/' . $moduleDirName . $folder);
                 if (is_dir($templateFolder)) {
                     //$templateList = array_diff(scandir($templateFolder, SCANDIR_SORT_NONE), ['..', '.',]);
-                    $temp = scandir($src, SCANDIR_SORT_NONE);
+                    $temp = scandir($templateFolder, SCANDIR_SORT_NONE);
                     if (false !== $temp) {
                         $templateList = array_diff($temp, [
-                        '..',
-                        '.',
-                    ]);
-                    foreach ($templateList as $k => $v) {
-                        $fileInfo = new SplFileInfo($templateFolder . $v);
-                        if ('html' === $fileInfo->getExtension() && 'index.html' !== $fileInfo->getFilename()) {
-                            if (file_exists($templateFolder . $v)) {
-                                unlink($templateFolder . $v);
+                            '..',
+                            '.',
+                        ]);
+
+                        foreach ($templateList as $k => $v) {
+                            $fileInfo = new SplFileInfo($templateFolder . $v);
+                            if ('html' === $fileInfo->getExtension() && 'index.html' !== $fileInfo->getFilename()) {
+                                if (file_exists($templateFolder . $v)) {
+                                    unlink($templateFolder . $v);
                                 }
                             }
                         }

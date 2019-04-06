@@ -92,8 +92,8 @@ function loadSampleData()
 
 function saveSampleData()
 {
-    $moduleDirName = basename(dirname(__DIR__));
-    //$moduleDirNameUpper = mb_strtoupper($moduleDirName);
+    $moduleDirName      = basename(dirname(__DIR__));
+    $moduleDirNameUpper = mb_strtoupper($moduleDirName);
 
     $tables = \Xmf\Module\Helper::getHelper($moduleDirName)->getModule()->getInfo('tables');
 
