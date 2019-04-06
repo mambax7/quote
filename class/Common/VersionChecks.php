@@ -45,7 +45,7 @@ trait VersionChecks
         //check for minimum XOOPS version
         $currentVer = substr(XOOPS_VERSION, 6); // get the numeric part of string
         if (null === $requiredVer) {
-            $requiredVer = '' . $module->getInfo('min_xoops'); //making sure it's a string
+            $requiredVer = '' . (string)$module->getInfo('min_xoops'); //making sure it's a string
         }
         $success = true;
 
@@ -72,7 +72,7 @@ trait VersionChecks
         if (null === $module) {
             $module = \XoopsModule::getByDirname($moduleDirName);
         }
-        xoops_loadLanguage('admin', $module->dirname());
+        xoops_loadLanguage('admin', $moduleDirName);
         xoops_loadLanguage('common', $moduleDirName);
 
         // check for minimum PHP version

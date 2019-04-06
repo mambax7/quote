@@ -33,7 +33,7 @@ class ObjectTree extends \XoopsObjectTree
      *
      * @param string $fieldName    Name of the member variable from the node objects that should be used as the title for the options.
      * @param int    $key          ID of the object to display as the root of select options
-     * @param string $optionsArray (reference to a string when called from outside) Result from previous recursions
+     * @param string|array $optionsArray (reference to a string when called from outside) Result from previous recursions
      * @param string $prefix_orig  String to indent items at deeper levels
      * @param string $prefix_curr  String to indent the current item
      *
@@ -43,7 +43,7 @@ class ObjectTree extends \XoopsObjectTree
     public function makeSelBoxOptionsArray($fieldName, $key, &$optionsArray, $prefix_orig, $prefix_curr = '')
     {
         if ($key > 0) {
-            $value                = $this->tree[$key]['obj']->getVar($this->_myId);
+            $value                = $this->tree[$key]['obj']->getVar($this->myId);
             $optionsArray[$value] = $prefix_curr . $this->tree[$key]['obj']->getVar($fieldName);
             $prefix_curr          .= $prefix_orig;
         }
@@ -67,7 +67,7 @@ class ObjectTree extends \XoopsObjectTree
      * @param int    $key             ID of the object to display as the root of select options
      *
      * @param string $extra
-     * @return string $optionsArray   Associative array of value->name pairs, useful for <a href='psi_element://XoopsFormSelect'>XoopsFormSelect</a>->addOptionArray method
+     * @return string|array $optionsArray   Associative array of value->name pairs, useful for <a href='psi_element://XoopsFormSelect'>XoopsFormSelect</a>->addOptionArray method
      *                                addOptionArray method
      */
 

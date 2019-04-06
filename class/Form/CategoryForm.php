@@ -39,6 +39,7 @@ xoops_load('XoopsFormLoader');
 class CategoryForm extends \XoopsThemeForm
 {
     public $targetObject;
+    public $helper;
 
     /**
      * Constructor
@@ -47,7 +48,6 @@ class CategoryForm extends \XoopsThemeForm
      */
     public function __construct($target)
     {
-        //  global $helper;
         $this->helper       = $target->helper;
         $this->targetObject = $target;
 
@@ -104,7 +104,7 @@ class CategoryForm extends \XoopsThemeForm
                 $descEditor = new \XoopsFormEditor(AM_QUOTE_CATEGORY_DESCRIPTION, $this->helper->getConfig('quoteEditorUser'), $editorOptions, $nohtml = false, $onfailure = 'textarea');
             }
         } else {
-            $descEditor = new \XoopsFormDhtmlTextArea(AM_QUOTE_CATEGORY_DESCRIPTION, 'description', $this->targetObject->getVar('description', 'e'), '100%', '100%');
+            $descEditor = new \XoopsFormDhtmlTextArea(AM_QUOTE_CATEGORY_DESCRIPTION, 'description', $this->targetObject->getVar('description', 'e'), 5, 50);
         }
         $this->addElement($descEditor);
         // Image
@@ -244,7 +244,7 @@ class CategoryForm extends \XoopsThemeForm
         $this->addElement($permsTray, false);
         unset($permsTray, $selectPerm);
 
-        //=========================================================================        
+        //=========================================================================
         $this->addElement(new \XoopsFormHidden('op', 'save'));
         $this->addElement(new \XoopsFormButton('', 'submit', _SUBMIT, 'submit'));
     }

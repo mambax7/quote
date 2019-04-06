@@ -41,8 +41,8 @@
 trait ModuleStats
 {
     /**
-     * @param \XoopsModules\{Quote}\Common\Configurator $configurator
-     * @param array $moduleStats
+     * @param \XoopsModules\Quote\Common\Configurator $configurator
+     * @param array                                   $moduleStats
      * @return array
      */
     public static function getModuleStats($configurator, $moduleStats)

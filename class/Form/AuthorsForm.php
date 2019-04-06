@@ -39,6 +39,7 @@ xoops_load('XoopsFormLoader');
 class AuthorsForm extends \XoopsThemeForm
 {
     public $targetObject;
+    public $helper;
 
     /**
      * Constructor
@@ -47,7 +48,6 @@ class AuthorsForm extends \XoopsThemeForm
      */
     public function __construct($target)
     {
-        //  global $helper;
         $this->helper       = $target->helper;
         $this->targetObject = $target;
 
@@ -84,7 +84,7 @@ class AuthorsForm extends \XoopsThemeForm
                 $descEditor = new \XoopsFormEditor(AM_QUOTE_AUTHORS_BIO, $this->helper->getConfig('quoteEditorUser'), $editorOptions, $nohtml = false, $onfailure = 'textarea');
             }
         } else {
-            $descEditor = new \XoopsFormDhtmlTextArea(AM_QUOTE_AUTHORS_BIO, 'description', $this->targetObject->getVar('description', 'e'), '100%', '100%');
+            $descEditor = new \XoopsFormDhtmlTextArea(AM_QUOTE_AUTHORS_BIO, 'description', $this->targetObject->getVar('description', 'e'), 5, 50);
         }
         $this->addElement($descEditor);
         // Photo
@@ -107,7 +107,7 @@ class AuthorsForm extends \XoopsThemeForm
         $imgtray->addElement($fileseltray);
         $this->addElement($imgtray);
         // Created
-        $this->addElement(new \XoopsFormTextDateSelect(AM_QUOTE_AUTHORS_CREATED, 'created', '', strtotime($this->targetObject->getVar('created'))));
+        $this->addElement(new \XoopsFormTextDateSelect(AM_QUOTE_AUTHORS_CREATED, 'created', 0, strtotime($this->targetObject->getVar('created'))));
 
         $this->addElement(new \XoopsFormHidden('op', 'save'));
         $this->addElement(new \XoopsFormButton('', 'submit', _SUBMIT, 'submit'));

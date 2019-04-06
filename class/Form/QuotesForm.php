@@ -39,6 +39,7 @@ xoops_load('XoopsFormLoader');
 class QuotesForm extends \XoopsThemeForm
 {
     public $targetObject;
+    public $helper;
 
     /**
      * Constructor
@@ -47,7 +48,6 @@ class QuotesForm extends \XoopsThemeForm
      */
     public function __construct($target)
     {
-        //  global $helper;
         $this->helper       = $target->helper;
         $this->targetObject = $target;
 
@@ -89,7 +89,7 @@ class QuotesForm extends \XoopsThemeForm
                 $descEditor = new \XoopsFormEditor(AM_QUOTE_QUOTES_QUOTE, $this->helper->getConfig('quoteEditorUser'), $editorOptions, $nohtml = false, $onfailure = 'textarea');
             }
         } else {
-            $descEditor = new \XoopsFormDhtmlTextArea(AM_QUOTE_QUOTES_QUOTE, 'description', $this->targetObject->getVar('description', 'e'), '100%', '100%');
+            $descEditor = new \XoopsFormDhtmlTextArea(AM_QUOTE_QUOTES_QUOTE, 'description', $this->targetObject->getVar('description', 'e'), 5, 50);
         }
         $this->addElement($descEditor);
         // Author
@@ -100,7 +100,7 @@ class QuotesForm extends \XoopsThemeForm
         $check_online->addOption(1, ' ');
         $this->addElement($check_online);
         // Created
-        $this->addElement(new \XoopsFormTextDateSelect(AM_QUOTE_QUOTES_CREATED, 'created', '', strtotime($this->targetObject->getVar('created'))));
+        $this->addElement(new \XoopsFormTextDateSelect(AM_QUOTE_QUOTES_CREATED, 'created', 0, strtotime($this->targetObject->getVar('created'))));
         // Author_id
         //$authorsHandler = $this->helper->getHandler('Authors');
         $db = \XoopsDatabaseFactory::getDatabaseConnection();
