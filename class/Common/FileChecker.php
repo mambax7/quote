@@ -31,9 +31,9 @@ xoops_loadLanguage('common', $moduleDirName);
 class FileChecker
 {
     /**
-     * @param      $file_path
-     * @param null $original_file_path
-     * @param      $redirectFile
+     * @param             $file_path
+     * @param null|string $original_file_path
+     * @param             $redirectFile
      *
      * @return bool|string
      * @internal param int $mode

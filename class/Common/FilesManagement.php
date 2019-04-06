@@ -64,16 +64,18 @@ trait FilesManagement
     {
         $dir = opendir($src);
         //     @mkdir($dst);
-        while (false !== ($file = readdir($dir))) {
-            if (('.' !== $file) && ('..' !== $file)) {
-                if (is_dir($src . '/' . $file)) {
-                    self::recurseCopy($src . '/' . $file, $dst . '/' . $file);
-                } else {
-                    copy($src . '/' . $file, $dst . '/' . $file);
+        if (false !== $dir) {
+            while (false !== ($file = readdir($dir))) {
+                if (('.' !== $file) && ('..' !== $file)) {
+                    if (is_dir($src . '/' . $file)) {
+                        self::recurseCopy($src . '/' . $file, $dst . '/' . $file);
+                    } else {
+                        copy($src . '/' . $file, $dst . '/' . $file);
+                    }
                 }
             }
+            closedir($dir);
         }
-        closedir($dir);
     }
 
     /**
@@ -143,21 +145,25 @@ trait FilesManagement
         $dirInfo = new \SplFileInfo($src);
         // validate is a directory
         if ($dirInfo->isDir()) {
-            $fileList = array_diff(scandir($src, SCANDIR_SORT_NONE), [
-                '..',
-                '.',
-            ]);
-            foreach ($fileList as $k => $v) {
-                $fileInfo = new \SplFileInfo("{$src}/{$v}");
-                if ($fileInfo->isDir()) {
-                    // recursively handle subdirectories
-                    if (!$success = self::deleteDirectory($fileInfo->getRealPath())) {
-                        break;
-                    }
-                } else {
-                    // delete the file
-                    if (!($success = unlink($fileInfo->getRealPath()))) {
-                        break;
+            $temp = scandir($src, SCANDIR_SORT_NONE);
+            if (false !== $temp) {
+                $fileList = array_diff($temp, [
+                    '..',
+                    '.',
+                ]);
+
+                foreach ($fileList as $k => $v) {
+                    $fileInfo = new \SplFileInfo("{$src}/{$v}");
+                    if ($fileInfo->isDir()) {
+                        // recursively handle subdirectories
+                        if (!$success = self::deleteDirectory($fileInfo->getRealPath())) {
+                            break;
+                        }
+                    } else {
+                        // delete the file
+                        if (!($success = unlink($fileInfo->getRealPath()))) {
+                            break;
+                        }
                     }
                 }
             }
