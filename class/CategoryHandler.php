@@ -47,7 +47,7 @@ class CategoryHandler extends \XoopsPersistableObjectHandler
 
     public function __construct(\XoopsDatabase $db = null, $helper = null)
     {
-        /** @var \XoopsModules\Quote\Helper $this ->helper */
+        /** @var \XoopsModules\Quote\Helper $this->helper */
         $this->helper = $helper;
         parent::__construct($db, 'quote_category', Category::class, 'id', 'title');
     }

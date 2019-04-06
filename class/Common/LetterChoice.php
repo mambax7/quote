@@ -63,7 +63,7 @@ class LetterChoice
      */
     public function __construct($objHandler, $criteria = null, $field_name = null, array $alphabet = [], $arg_name = 'letter', $url = null, $extra_arg = '', $caseSensitive = false)
     {
-        /** @var \XoopsModules\Wfdownloads\Helper $this ->helper */
+        /** @var \XoopsModules\Wfdownloads\Helper $this->helper */
         $this->helper     = \XoopsModules\Wfdownloads\Helper::getInstance();
         $this->objHandler = $objHandler;
         $this->criteria   = null === $criteria ? new \CriteriaCompo() : $criteria;
