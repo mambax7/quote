@@ -122,7 +122,7 @@ class CategoryForm extends \XoopsThemeForm
         $imgtray->addElement($imageselect);
         $imgtray->addElement(new \XoopsFormLabel('', "<br><img src='" . XOOPS_URL . '/' . $uploadDir . '/' . $image . "' name='image_image' id='image_image' alt='' style='max-width:300px' />"));
         $fileseltray = new \XoopsFormElementTray('', '<br>');
-        $fileseltray->addElement(new \XoopsFormFile(AM_QUOTE_FORMUPLOAD, 'image', xoops_getModuleOption('maxsize')));
+        $fileseltray->addElement(new \XoopsFormFile(AM_QUOTE_FORMUPLOAD, 'image', $this->helper->getConfig('maxsize')));
         $fileseltray->addElement(new \XoopsFormLabel(''));
         $imgtray->addElement($fileseltray);
         $this->addElement($imgtray);

@@ -182,7 +182,7 @@ switch ($op) {
                 $quotesArray['online'] = $quotesTempArray[$i]->getVar('online');
 
                 $GLOBALS['xoopsTpl']->assign('selectorcreated', AM_QUOTE_QUOTES_CREATED);
-                $quotesArray['created'] = date(_SHORTDATESTRING, strtotime($quotesTempArray[$i]->getVar('created')));
+                $quotesArray['created'] = date(_SHORTDATESTRING, strtotime((string)$quotesTempArray[$i]->getVar('created')));
 
                 $GLOBALS['xoopsTpl']->assign('selectorauthor_id', AM_QUOTE_QUOTES_AUTHOR_ID);
                 $quotesArray['author_id']   = $authorsHandler->get($quotesTempArray[$i]->getVar('author_id'))->getVar('name');

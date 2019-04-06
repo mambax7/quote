@@ -83,7 +83,7 @@ switch ($op) {
         $quotes['quote']   = $quotesObject->getVar('quote');
         $quotes['author']  = $quotesObject->getVar('author');
         $quotes['online']  = $quotesObject->getVar('online');
-        $quotes['created'] = date(_SHORTDATESTRING, strtotime($quotesObject->getVar('created')));
+        $quotes['created'] = date(_SHORTDATESTRING, strtotime((string)$quotesObject->getVar('created')));
         /** @var \XoopsPersistableObjectHandler $authorsHandler */
         $authorsHandler = $helper->getHandler('Authors');
 
@@ -110,6 +110,7 @@ switch ($op) {
         //        viewall();
 
         if ($quotesCount > 0) {
+            $GLOBALS['xoopsTpl']->assign('quotes', []);
             foreach (array_keys($quotesArray) as $i) {
                 $quotes['id'] = $quotesArray[$i]->getVar('id');
                 /** @var \XoopsPersistableObjectHandler $categoryHandler */
@@ -119,7 +120,7 @@ switch ($op) {
                 $quotes['quote']   = $quotesArray[$i]->getVar('quote');
                 $quotes['author']  = $quotesArray[$i]->getVar('author');
                 $quotes['online']  = $quotesArray[$i]->getVar('online');
-                $quotes['created'] = date(_SHORTDATESTRING, strtotime($quotesArray[$i]->getVar('created')));
+                $quotes['created'] = date(_SHORTDATESTRING, strtotime((string)$quotesArray[$i]->getVar('created')));
                 /** @var \XoopsPersistableObjectHandler $authorsHandler */
                 $authorsHandler = $helper->getHandler('Authors');
 
@@ -140,17 +141,17 @@ switch ($op) {
 
 //keywords
 if (isset($keywords)) {
-    $utility::metaKeywords(xoops_getModuleOption('keywords', $moduleDirName) . ', ' . implode(', ', $keywords));
+    $utility::metaKeywords($helper->getConfig('keywords') . ', ' . implode(', ', $keywords));
 }
 //description
 $utility::metaDescription(MD_QUOTE_QUOTES_DESC);
 
 $GLOBALS['xoopsTpl']->assign('xoops_mpageurl', QUOTE_URL . '/quotes.php');
 $GLOBALS['xoopsTpl']->assign('quote_url', QUOTE_URL);
-$GLOBALS['xoopsTpl']->assign('adv', xoops_getModuleOption('advertise', $moduleDirName));
+$GLOBALS['xoopsTpl']->assign('adv', $helper->getConfig('advertise'));
 
-$GLOBALS['xoopsTpl']->assign('bookmarks', xoops_getModuleOption('bookmarks', $moduleDirName));
-$GLOBALS['xoopsTpl']->assign('fbcomments', xoops_getModuleOption('fbcomments', $moduleDirName));
+$GLOBALS['xoopsTpl']->assign('bookmarks', $helper->getConfig('bookmarks'));
+$GLOBALS['xoopsTpl']->assign('fbcomments', $helper->getConfig('fbcomments'));
 
 $GLOBALS['xoopsTpl']->assign('admin', QUOTE_ADMIN);
 $GLOBALS['xoopsTpl']->assign('copyright', $copyright);

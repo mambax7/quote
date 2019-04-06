@@ -63,7 +63,7 @@ switch ($op) {
 
         require_once XOOPS_ROOT_PATH . '/class/uploader.php';
         $uploadDir = XOOPS_UPLOAD_PATH . '/quote/images/';
-        $uploader  = new \XoopsMediaUploader($uploadDir, xoops_getModuleOption('mimetypes', 'quote'), xoops_getModuleOption('maxsize', 'quote'), null, null);
+        $uploader  = new \XoopsMediaUploader($uploadDir, $helper->getConfig('mimetypes'), $helper->getConfig('maxsize'), null, null);
         if ($uploader->fetchMedia(Request::getArray('xoops_upload_file', '', 'POST')[0])) {
 
             //$extension = preg_replace( '/^.+\.([^.]+)$/sU' , '' , $_FILES['attachedfile']['name']);
@@ -204,7 +204,7 @@ switch ($op) {
                 $authorsArray['photo'] = "<img src='" . $uploadUrl . $authorsTempArray[$i]->getVar('photo') . "' name='" . 'name' . "' id=" . 'id' . " alt='' style='max-width:100px'>";
 
                 $GLOBALS['xoopsTpl']->assign('selectorcreated', AM_QUOTE_AUTHORS_CREATED);
-                $authorsArray['created']     = date(_SHORTDATESTRING, strtotime($authorsTempArray[$i]->getVar('created')));
+                $authorsArray['created']     = date(_SHORTDATESTRING, strtotime((string)$authorsTempArray[$i]->getVar('created')));
                 $authorsArray['edit_delete'] = "<a href='authors.php?op=edit&id=" . $i . "'><img src=" . $pathIcon16 . "/edit.png alt='" . _EDIT . "' title='" . _EDIT . "'></a>
                <a href='authors.php?op=delete&id=" . $i . "'><img src=" . $pathIcon16 . "/delete.png alt='" . _DELETE . "' title='" . _DELETE . "'></a>
                <a href='authors.php?op=clone&id=" . $i . "'><img src=" . $pathIcon16 . "/editcopy.png alt='" . _CLONE . "' title='" . _CLONE . "'></a>";

@@ -28,7 +28,7 @@ require __DIR__ . '/admin_header.php';
 xoops_cp_header();
 require XOOPS_ROOT_PATH . '/class/xoopsform/grouppermform.php';
 if ('' != \Xmf\Request::getString('submit', '')) {
-    redirect_header(XOOPS_URL . '/modules/' . $GLOBALS['xoopsModule']->dirname() . '/admin/permissions.php', 1, AM_QUOTE_PERMISSIONS__GPERMUPDATED);
+    redirect_header(XOOPS_URL . '/modules/' . $GLOBALS['xoopsModule']->dirname() . '/admin/permissions.php', 1, AM_QUOTE_PERMISSIONS_GPERMUPDATED);
 }
 // Check admin have access to this page
 /*$group = $GLOBALS['xoopsUser']->getGroups ();

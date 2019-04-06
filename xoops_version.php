@@ -82,35 +82,70 @@ $modversion = [
     ],
 ];
 // ------------------- Search -----------------------------//
-$modversion['hasSearch'] = 1;
+$modversion['hasSearch']      = 1;
 $modversion['search']['file'] = 'include/search.inc.php';
 $modversion['search']['func'] = 'quote_search';
 //  ------------------- Comments -----------------------------//
-$modversion['hasComments'] = 1;
+$modversion['hasComments']          = 1;
 $modversion['comments']['itemName'] = 'com_id';
 $modversion['comments']['pageName'] = 'comments.php';
 // Comment callback functions
-$modversion['comments']['callbackFile'] = 'include/comment_functions.php';
+$modversion['comments']['callbackFile']        = 'include/comment_functions.php';
 $modversion['comments']['callback']['approve'] = 'quoteCommentsApprove';
-$modversion['comments']['callback']['update'] = 'quoteCommentsUpdate';
+$modversion['comments']['callback']['update']  = 'quoteCommentsUpdate';
 //  ------------------- Templates -----------------------------//
-$modversion['templates'][] = ['file' => 'quote_header.tpl', 'description' => ''];
-$modversion['templates'][] = ['file' => 'quote_index.tpl', 'description' => ''];
-$modversion['templates'][] = ['file' => 'quote_quotes.tpl', 'description' => ''];
+$modversion['templates'][] = [
+    'file'        => 'quote_header.tpl',
+    'description' => ''
+];
+$modversion['templates'][] = [
+    'file'        => 'quote_index.tpl',
+    'description' => ''
+];
+$modversion['templates'][] = [
+    'file'        => 'quote_quotes.tpl',
+    'description' => ''
+];
 
-$modversion['templates'][] = ['file' => 'quote_quotes_list0.tpl', 'description' => ''];
-$modversion['templates'][] = ['file' => 'quote_category.tpl', 'description' => ''];
+$modversion['templates'][] = [
+    'file'        => 'quote_quotes_list0.tpl',
+    'description' => ''
+];
+$modversion['templates'][] = [
+    'file'        => 'quote_category.tpl',
+    'description' => ''
+];
 
-$modversion['templates'][] = ['file' => 'quote_category_list0.tpl', 'description' => ''];
-$modversion['templates'][] = ['file' => 'quote_authors.tpl', 'description' => ''];
+$modversion['templates'][] = [
+    'file'        => 'quote_category_list0.tpl',
+    'description' => ''
+];
+$modversion['templates'][] = [
+    'file'        => 'quote_authors.tpl',
+    'description' => ''
+];
 
-$modversion['templates'][] = ['file' => 'quote_authors_list0.tpl', 'description' => ''];
-$modversion['templates'][] = ['file' => 'quote_footer.tpl', 'description' => ''];
+$modversion['templates'][] = [
+    'file'        => 'quote_authors_list0.tpl',
+    'description' => ''
+];
+$modversion['templates'][] = [
+    'file'        => 'quote_footer.tpl',
+    'description' => ''
+];
 
-
-$modversion['templates'][] = ['file' => 'admin/quote_admin_about.tpl', 'description' => ''];
-$modversion['templates'][] = ['file' => 'admin/quote_admin_help.tpl', 'description' => ''];
-$modversion['templates'][] = ['file' => 'admin/quote_admin_authors.tpl', 'description' => ''];
+$modversion['templates'][] = [
+    'file'        => 'admin/quote_admin_about.tpl',
+    'description' => ''
+];
+$modversion['templates'][] = [
+    'file'        => 'admin/quote_admin_help.tpl',
+    'description' => ''
+];
+$modversion['templates'][] = [
+    'file'        => 'admin/quote_admin_authors.tpl',
+    'description' => ''
+];
 
 // ------------------- Help files ------------------- //
 $modversion['helpsection'] = [

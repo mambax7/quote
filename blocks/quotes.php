@@ -42,7 +42,6 @@ function showQuoteQuotes($options)
 
     /** @var \XoopsModules\Quote\Helper $helper */
     $helper = \XoopsModules\Quote\Helper::getInstance();
-    $helper->loadLanguage('blocks');
 
     /** @var \XoopsPersistableObjectHandler $quotesHandler */
     $quotesHandler = $helper->getHandler('Quotes');

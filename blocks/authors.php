@@ -42,7 +42,6 @@ function showQuoteAuthors($options)
 
     /** @var \XoopsModules\Quote\Helper $helper */
     $helper = \XoopsModules\Quote\Helper::getInstance();
-    $helper->loadLanguage('blocks');
 
     /** @var \XoopsPersistableObjectHandler $authorsHandler */
     $authorsHandler = $helper->getHandler('Authors');

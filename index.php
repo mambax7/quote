@@ -35,16 +35,16 @@ global $xoTheme;
 /** @var xos_opal_Theme $xoTheme */
 $xoTheme->addStylesheet($stylesheet);
 // keywords
-$utility::metaKeywords(xoops_getModuleOption('keywords', $moduleDirName));
+$utility::metaKeywords($helper->getConfig('keywords'));
 // description
 $utility::metaDescription(MD_QUOTE_DESC);
 //
 $GLOBALS['xoopsTpl']->assign('xoops_mpageurl', QUOTE_URL . '/index.php');
 $GLOBALS['xoopsTpl']->assign('quote_url', QUOTE_URL);
-$GLOBALS['xoopsTpl']->assign('adv', xoops_getModuleOption('advertise', $moduleDirName));
+$GLOBALS['xoopsTpl']->assign('adv', $helper->getConfig('advertise'));
 //
-$GLOBALS['xoopsTpl']->assign('bookmarks', xoops_getModuleOption('bookmarks', $moduleDirName));
-$GLOBALS['xoopsTpl']->assign('fbcomments', xoops_getModuleOption('fbcomments', $moduleDirName));
+$GLOBALS['xoopsTpl']->assign('bookmarks', $helper->getConfig('bookmarks'));
+$GLOBALS['xoopsTpl']->assign('fbcomments', $helper->getConfig('fbcomments'));
 //
 $GLOBALS['xoopsTpl']->assign('admin', QUOTE_ADMIN);
 $GLOBALS['xoopsTpl']->assign('copyright', $copyright);

@@ -12,7 +12,7 @@
             <th><{$smarty.const.MD_QUOTE_QUOTES_ONLINE}></th>
             <th><{$smarty.const.MD_QUOTE_QUOTES_CREATED}></th>
             <th><{$smarty.const.MD_QUOTE_QUOTES_AUTHOR_ID}></th>
-            <th width="10%"><{$smarty.const.MD_QUOTE_ACTION}></th>
+            <th width="80"><{$smarty.const.MD_QUOTE_ACTION}></th>
         </tr>
         </thead>
         <{foreach item=quotes from=$quotes}>
@@ -27,10 +27,9 @@
                 <td><{$quotes.created}></td>
                 <td><{$quotes.author_id}></td>
                 <td>
-                    <a href="quotes.php?op=view&id=<{$quotes.id}>" title="<{$smarty.const._PREVIEW}>"><img src="<{xoModuleIcons16 search.png}>" alt="<{$smarty.const._PREVIEW}>" title="<{$smarty.const._PREVIEW}>"</a> &nbsp;
+                       <a href="quotes.php?op=view&id=<{$quotes.id}>" title="<{$smarty.const._PREVIEW}>"><img src="<{xoModuleIcons16 search.png}>" alt="<{$smarty.const._PREVIEW}>" title="<{$smarty.const._PREVIEW}>"</a>
                     <{if $xoops_isadmin == true}>
                         <a href="admin/quotes.php?op=edit&id=<{$quotes.id}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 edit.png}>" alt="<{$smarty.const._EDIT}>" title="<{$smarty.const._EDIT}>"/></a>
-                        &nbsp;
                         <a href="admin/quotes.php?op=delete&id=<{$quotes.id}>" title="<{$smarty.const._DELETE}>"><img src="<{xoModuleIcons16 delete.png}>" alt="<{$smarty.const._DELETE}>" title="<{$smarty.const._DELETE}>"</a>
                     <{/if}>
                 </td>

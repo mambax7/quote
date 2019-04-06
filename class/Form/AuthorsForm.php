@@ -102,7 +102,7 @@ class AuthorsForm extends \XoopsThemeForm
         $imgtray->addElement($imageselect);
         $imgtray->addElement(new \XoopsFormLabel('', "<br><img src='" . XOOPS_URL . '/' . $uploadDir . '/' . $photo . "' name='image_photo' id='image_photo' alt='' style='max-width:300px' />"));
         $fileseltray = new \XoopsFormElementTray('', '<br>');
-        $fileseltray->addElement(new \XoopsFormFile(AM_QUOTE_FORMUPLOAD, 'photo', xoops_getModuleOption('maxsize')));
+        $fileseltray->addElement(new \XoopsFormFile(AM_QUOTE_FORMUPLOAD, 'photo', $this->helper->getConfig('maxsize')));
         $fileseltray->addElement(new \XoopsFormLabel(''));
         $imgtray->addElement($fileseltray);
         $this->addElement($imgtray);
