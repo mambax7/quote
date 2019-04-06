@@ -21,6 +21,7 @@
  * @since           1.0.0
  */
 
+use \XoopsModules\Quote\Common;
 /**
  * Class Migrate synchronize existing tables with target schema
  *
@@ -36,17 +37,18 @@ class Migrate extends \Xmf\Database\Migrate
 
     /**
      * Migrate constructor.
+     * @param Common\Configurator $configurator
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
-    public function __construct()
+    public function __construct(Common\Configurator $configurator = null)
     {
-        require_once dirname(dirname(__DIR__)) . '/include/config.php';
-        $config             = getConfig();
-        $this->renameTables = $config->renameTables;
+        if (null !== $configurator) {
+            $this->renameTables = $configurator->renameTables;
 
-        $moduleDirName = basename(dirname(dirname(__DIR__)));
-        parent::__construct($moduleDirName);
+            $moduleDirName = basename(dirname(dirname(__DIR__)));
+            parent::__construct($moduleDirName);
+        }
     }
 
     /**

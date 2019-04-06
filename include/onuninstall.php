@@ -46,13 +46,13 @@ function xoops_module_pre_uninstall_quote(\XoopsModule $module)
 function xoops_module_uninstall_quote(\XoopsModule $module)
 {
     require dirname(__DIR__) . '/preloads/autoloader.php';
-    $moduleDirName      = basename(dirname(__DIR__));
-    $moduleDirNameUpper = mb_strtoupper($moduleDirName); //$capsDirName
+    $moduleDirName = basename(dirname(__DIR__));
+    //$moduleDirNameUpper = mb_strtoupper($moduleDirName); //$capsDirName
 
     /** @var \XoopsModules\Quote\Helper $helper */
     /** @var \XoopsModules\Quote\Utility $utility */
-    $helper  = \XoopsModules\Quote\Helper::getInstance();
-    $utility = new \XoopsModules\Quote\Utility();
+    $helper = \XoopsModules\Quote\Helper::getInstance();
+    //$utility      = new \XoopsModules\Quote\Utility();
     //    $configurator = new \XoopsModules\Quote\Common\Configurator();
 
     // Load language files

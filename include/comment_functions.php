@@ -31,8 +31,7 @@ function quoteCommentsUpdate($itemId, $commentCount)
 {
     /** @var \XoopsModules\Quote\Helper $helper */
     $helper = \XoopsModules\Quote\Helper::getInstance();
-
-    /** @var \XoopsModules\Quote\AuthorsHandler $helper->getHandler('Authors') */
+    /** @var \XoopsPersistableObjectHandler $helper ->getHandler('Authors') */
     if (!$helper->getHandler('Authors')->updateAll('comments', (int)$commentCount, new \Criteria('lid', (int)$itemId))) {
         return false;
     }

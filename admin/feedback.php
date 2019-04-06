@@ -47,8 +47,9 @@ switch ($op) {
         $feedback->name  = $GLOBALS['xoopsUser']->getVar('name');
         $feedback->email = $GLOBALS['xoopsUser']->getVar('email');
         $feedback->site  = XOOPS_URL;
-        $form            = $feedback->getFormFeedback();
-        echo $form->display();
+        /** @var \XoopsThemeForm $form */
+        $form = $feedback->getFormFeedback();
+        echo $form->render();
         break;
 
     case 'send':
@@ -103,7 +104,7 @@ switch ($op) {
             <h3>' . constant('CO_' . $moduleDirNameUpper . '_' . 'FB_SEND_ERROR') . '</h3>
             </div>';
         $form = $feedback->getFormFeedback();
-        echo $form->display();
+        echo $form->render();
 
         break;
 }

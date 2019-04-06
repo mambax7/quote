@@ -86,6 +86,7 @@ function loadAdminConfig($yamlFile)
 
 function hideButtons($yamlFile)
 {
+    $app                        = [];
     $app['displaySampleButton'] = 0;
     Yaml::save($app, $yamlFile);
     redirect_header('index.php', 0, '');
@@ -93,6 +94,7 @@ function hideButtons($yamlFile)
 
 function showButtons($yamlFile)
 {
+    $app                        = []
     $app['displaySampleButton'] = 1;
     Yaml::save($app, $yamlFile);
     redirect_header('index.php', 0, '');

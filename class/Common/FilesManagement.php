@@ -151,7 +151,6 @@ trait FilesManagement
                     '..',
                     '.',
                 ]);
-
                 foreach ($fileList as $k => $v) {
                     $fileInfo = new \SplFileInfo("{$src}/{$v}");
                     if ($fileInfo->isDir()) {
@@ -199,7 +198,7 @@ trait FilesManagement
             return false;
         }
 
-        $success = true;
+        //$success = true;
 
         // Open the source directory to read in files
         $iterator = new \DirectoryIterator($src);

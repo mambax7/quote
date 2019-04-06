@@ -65,7 +65,7 @@ class QuotesForm extends \XoopsThemeForm
         $this->addElement(new \XoopsFormLabel(AM_QUOTE_QUOTES_ID, $this->targetObject->getVar('id'), 'id'));
         // Cid
         //$categoryHandler = $this->helper->getHandler('Category');
-        $db = \XoopsDatabaseFactory::getDatabaseConnection();
+        //$db     = \XoopsDatabaseFactory::getDatabaseConnection();
         /** @var \XoopsPersistableObjectHandler $categoryHandler */
         $categoryHandler = $this->helper->getHandler('Category');
 
@@ -103,7 +103,7 @@ class QuotesForm extends \XoopsThemeForm
         $this->addElement(new \XoopsFormTextDateSelect(AM_QUOTE_QUOTES_CREATED, 'created', 0, strtotime($this->targetObject->getVar('created'))));
         // Author_id
         //$authorsHandler = $this->helper->getHandler('Authors');
-        $db = \XoopsDatabaseFactory::getDatabaseConnection();
+        //$db     = \XoopsDatabaseFactory::getDatabaseConnection();
         /** @var \XoopsPersistableObjectHandler $authorsHandler */
         $authorsHandler = $this->helper->getHandler('Authors');
 

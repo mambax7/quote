@@ -52,9 +52,9 @@ function tableExists($tablename)
  */
 function xoops_module_pre_update_quote(\XoopsModule $module)
 {
-    /** @var \XoopsModules\Quote\Helper $helper */
+    // /** @var \XoopsModules\Quote\Helper $helper */ 
+    //$helper       = \XoopsModules\Quote\Helper::getInstance();
     /** @var \XoopsModules\Quote\Utility $utility */
-    $helper  = \XoopsModules\Quote\Helper::getInstance();
     $utility = new \XoopsModules\Quote\Utility();
 
     $xoopsSuccess = $utility::checkVerXoops($module);
@@ -69,7 +69,7 @@ function xoops_module_pre_update_quote(\XoopsModule $module)
 /**
  * Performs tasks required during update of the module
  * @param \XoopsModule $module {@link XoopsModule}
- * @param null         $previousVersion
+ * @param null|int     $previousVersion
  *
  * @return bool true if update successful, false if not
  */
@@ -77,7 +77,7 @@ function xoops_module_pre_update_quote(\XoopsModule $module)
 function xoops_module_update_quote(\XoopsModule $module, $previousVersion = null)
 {
     $moduleDirName      = basename(dirname(__DIR__));
-    $moduleDirNameUpper = mb_strtoupper($moduleDirName);
+    //$moduleDirNameUpper = mb_strtoupper($moduleDirName);
 
     /** @var Quote\Helper $helper */ /** @var Quote\Utility $utility */
     /** @var Quote\Common\Configurator $configurator */
@@ -93,7 +93,10 @@ function xoops_module_update_quote(\XoopsModule $module, $previousVersion = null
             foreach ($configurator->templateFolders as $folder) {
                 $templateFolder = $GLOBALS['xoops']->path('modules/' . $moduleDirName . $folder);
                 if (is_dir($templateFolder)) {
-                    $templateList = array_diff(scandir($templateFolder, SCANDIR_SORT_NONE), [
+                    //$templateList = array_diff(scandir($templateFolder, SCANDIR_SORT_NONE), ['..', '.',]);
+                    $temp = scandir($src, SCANDIR_SORT_NONE);
+                    if (false !== $temp) {
+                        $templateList = array_diff($temp, [
                         '..',
                         '.',
                     ]);
@@ -102,6 +105,7 @@ function xoops_module_update_quote(\XoopsModule $module, $previousVersion = null
                         if ('html' === $fileInfo->getExtension() && 'index.html' !== $fileInfo->getFilename()) {
                             if (file_exists($templateFolder . $v)) {
                                 unlink($templateFolder . $v);
+                                }
                             }
                         }
                     }

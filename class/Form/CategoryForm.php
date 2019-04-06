@@ -66,23 +66,23 @@ class CategoryForm extends \XoopsThemeForm
         // Pid
         require_once XOOPS_ROOT_PATH . '/class/tree.php';
         //$categoryHandler = xoops_getModuleHandler('category', 'quote' );
-        $db = \XoopsDatabaseFactory::getDatabaseConnection();
+        //$db     = \XoopsDatabaseFactory::getDatabaseConnection();
         /** @var \XoopsPersistableObjectHandler $categoryHandler */
         $categoryHandler = $this->helper->getHandler('Category');
 
         $criteria      = new \CriteriaCompo();
         $categoryArray = $categoryHandler->getObjects($criteria);
-        if ($categoryArray) {
+        if (!empty($categoryArray)) {
 
             $categoryTree = new \XoopsObjectTree($categoryArray, 'id', 'pid');
 
-            if (Quote\Utility::checkVerXoops($GLOBALS['xoopsModule'], '2.5.9')) {
-                $categoryPid = $categoryTree->makeSelectElement('pid', 'title', '--', $this->targetObject->getVar('pid'), true, 0, '', AM_QUOTE_CATEGORY_PID);
-                $this->addElement($categoryPid);
-            } else {
-                $categoryPid = $categoryTree->makeSelBox('pid', 'title', '--', $this->targetObject->getVar('pid', 'e'), true);
-                $this->addElement(new \XoopsFormLabel (AM_QUOTE_CATEGORY_PID, $categoryPid));
-            }
+            // if (Quote\Utility::checkVerXoops($GLOBALS['xoopsModule'], '2.5.9')) {
+            $categoryPid = $categoryTree->makeSelectElement('pid', 'title', '--', $this->targetObject->getVar('pid'), true, 0, '', AM_QUOTE_CATEGORY_PID);
+            $this->addElement($categoryPid);
+            //  } else {
+            //      $categoryPid = $categoryTree->makeSelBox( 'pid', 'title','--', $this->targetObject->getVar('pid', 'e' ), true );
+            //      $this->addElement( new \XoopsFormLabel ( AM_QUOTE_CATEGORY_PID, $categoryPid ) );
+            //  }
 
         }
         // Title
@@ -244,7 +244,7 @@ class CategoryForm extends \XoopsThemeForm
         $this->addElement($permsTray, false);
         unset($permsTray, $selectPerm);
 
-        //=========================================================================
+        //=========================================================================        
         $this->addElement(new \XoopsFormHidden('op', 'save'));
         $this->addElement(new \XoopsFormButton('', 'submit', _SUBMIT, 'submit'));
     }

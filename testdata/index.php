@@ -72,8 +72,10 @@ function loadSampleData()
 
     foreach ($tables as $table) {
         $tabledata = \Xmf\Yaml::readWrapped($table . '.yml');
-        \Xmf\Database\TableLoad::truncateTable($table);
-        \Xmf\Database\TableLoad::loadTableFromArray($table, $tabledata);
+        if (is_array($tabledata)) {
+            \Xmf\Database\TableLoad::truncateTable($table);
+            \Xmf\Database\TableLoad::loadTableFromArray($table, $tabledata);
+        }
     }
 
     //  ---  COPY test folder files ---------------
@@ -90,8 +92,8 @@ function loadSampleData()
 
 function saveSampleData()
 {
-    $moduleDirName      = basename(dirname(__DIR__));
-    $moduleDirNameUpper = mb_strtoupper($moduleDirName);
+    $moduleDirName = basename(dirname(__DIR__));
+    //$moduleDirNameUpper = mb_strtoupper($moduleDirName);
 
     $tables = \Xmf\Module\Helper::getHelper($moduleDirName)->getModule()->getInfo('tables');
 

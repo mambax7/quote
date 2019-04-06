@@ -44,6 +44,7 @@ class LetterChoice
     private $url;
     private $extra;
     private $caseSensitive;
+    private $helper;
 
     /**
      * *#@-
@@ -52,8 +53,8 @@ class LetterChoice
     /**
      * Constructor
      *
-     * @param \XoopsPersistableObjectHandler $objHandler {@link XoopsPersistableObjectHandler}
-     * @param \CriteriaElement               $criteria   {@link CriteriaElement}
+     * @param \XoopsPersistableObjectHandler $objHandler {@link \XoopsPersistableObjectHandler}
+     * @param \CriteriaElement               $criteria   {@link \CriteriaElement}
      * @param string                         $field_name search by field
      * @param array                          $alphabet   array of alphabet letters
      * @param string                         $arg_name   item on the current page
@@ -83,8 +84,8 @@ class LetterChoice
     /**
      * Create choice by letter
      *
-     * @param null $alphaCount
-     * @param null $howmanyother
+     * @param null|int $alphaCount
+     * @param null|int $howmanyother
      * @return string
      */
     public function render($alphaCount = null, $howmanyother = null)

@@ -79,7 +79,7 @@ class Utility
     public static function blockAddCatSelect($cats)
     {
         $cat_sql = '';
-        if (is_array($cats)) {
+        if (is_array($cats) && !empty($cats)) {
             $cat_sql = '(' . current($cats);
             array_shift($cats);
             foreach ($cats as $cat) {
@@ -186,6 +186,7 @@ class Utility
      */
     public static function truncateHtml($text, $length = 100, $ending = '...', $exact = false, $considerHtml = true)
     {
+        $openTags = [];
         if ($considerHtml) {
             // if the plain text is shorter than the maximum length, return the whole text
             if (strlen(preg_replace('/<.*?' . '>/', '', $text)) <= $length) {
@@ -194,8 +195,8 @@ class Utility
             // splits all html-tags to scanable lines
             preg_match_all('/(<.+?' . '>)?([^<>]*)/s', $text, $lines, PREG_SET_ORDER);
             $total_length = strlen($ending);
-            $openTags     = [];
-            $truncate     = '';
+            //$openTags    = [];
+            $truncate = '';
             foreach ($lines as $line_matchings) {
                 // if there is any html-tag in this line, handle it and add it (uncounted) to the output
                 if (!empty($line_matchings[1])) {
